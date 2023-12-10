@@ -4,7 +4,7 @@ import api from './server/api.js'
 import readFile from './server/readFile.js'
 
 const app = express()
-const port = 8022 // 自定义端口号（不要与已存在端口冲突）
+const port = 8022
 
 var datas={
   app,
@@ -32,7 +32,6 @@ async function main(){
   for (let index = 0; index < toDoList.length; index++) {
     const element = toDoList[index];
     await element()
-    // console.log('加载' + index +'成功')
   }
 
   app.listen(port, () => {

@@ -1,0 +1,16 @@
+body{
+  background-color: transparent;
+  padding: none;
+  margin: none;
+  font-family: Misans;
+  /* backdrop-filter: blur(15px); */
+  overflow: hidden;
+  background-color: #eee;
+}
+main {
+  background: transparent;
+}
+@font-face {
+  font-family: MiSans;
+  src: local('MiSans'), url('./assets/MiSans-Normal.ttf');
+}
