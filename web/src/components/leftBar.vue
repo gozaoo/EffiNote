@@ -62,19 +62,22 @@ watch(
 
 <style>
 .leftBar{
-  --width: 38px;
-  width: 38px;
+  --width: 190px;
+  width: 190px;
   transition: 0.25s cubic-bezier(.5,.3,.2,1);
   user-select: none;
   display: flex;
   flex-direction: column;
   margin: 0 7px;
   gap: 7px;
+  position: absolute;
 }
 .leftBar.wide{
-  --width: 200px
+  --width: 200px;
+  
 }
-
+.leftBar.wide>*{
+}
 </style>
 
 <style scoped>

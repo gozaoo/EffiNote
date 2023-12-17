@@ -39,4 +39,7 @@
         --delay:0.125s;
         transition: all 0.125s cubic-bezier(.5,.3,.2,1) var(--delay)
     }
+    .svg{
+        color: #000a;
+    }
 </style>

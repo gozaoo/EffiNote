@@ -33,7 +33,7 @@
               if(newState == "wide"){
                 return (document.body.offsetWidth - 200) / this.dom.offsetWidth
               } else {
-                return (document.body.offsetWidth - 50) / this.dom.offsetWidth
+                return 1
 
               }
 
@@ -42,6 +42,8 @@
 
               if(newState == "wide"){
                 return 8 / ( (document.body.offsetWidth - 200) / this.dom.offsetWidth) + "px"
+
+                // return 8 / ( (document.body.offsetWidth - 200) / this.dom.offsetWidth) + "px"
               } else {
                 return '8px'
 
@@ -68,6 +70,7 @@
     display: block;
     position: absolute;
     top: 8px;
+    left: 0px;
     right: 8px;
     bottom: 8px;
     background-color: #fff;
@@ -78,7 +81,7 @@
     /* max-width: calc(100% - 108px); */
     box-sizing: border-box;
     padding: 10px 16px;
-    margin-left: 10px;
+    margin: 0 6px;
     border-radius: 8px;
     box-shadow: 0px 0px 8px #0002;
     position: relative;
