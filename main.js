@@ -12,10 +12,10 @@ var datas={
   lib:{}
 }
 
-app.use(express.static('dist')) // dist 是项目的打包资源
+app.use(express.static('./web/dist/')) // dist 是项目的打包资源
 app.use('/api', api)
 
-import { createServer } from 'vite'
+import { createServer,build } from 'vite'
 
 const server = await createServer({
   // 任何合法的用户配置选项，加上 `mode` 和 `configFile`
@@ -26,6 +26,11 @@ server.listen()
 async function main(){
   let toDoList = [
     showWelcome,
+    ()=>build({
+      // 任何合法的用户配置选项，加上 `mode` 和 `configFile`
+      configFile: './vite.config.js',
+      root: './web/',
+    }),
     loadLib
   ]
 

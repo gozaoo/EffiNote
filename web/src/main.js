@@ -7,7 +7,6 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 let vueApp = createApp(App)
 
 import routes from './router/index.js'
-
 const router = createRouter({
   history: createWebHashHistory(),
   routes
@@ -16,3 +15,5 @@ const router = createRouter({
 vueApp.use(router)
 
 vueApp.mount('#app')
+
+export default vueApp

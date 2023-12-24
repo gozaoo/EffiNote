@@ -60,7 +60,7 @@
 
 <template>
   <div class="router">
-    {{ leftBarState }}
+    <!-- {{ leftBarState }} -->
     <router-view></router-view>
   </div>
 </template>

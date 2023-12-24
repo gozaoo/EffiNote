@@ -24,39 +24,20 @@ watch(
 <template> 
   <div :class="['leftBar',leftBarState]">
     <!--调整侧栏状态-->
-    <h1>我的音乐</h1>
+    <h1>目录</h1>
 
     <!--音乐库-->
     <iconWithText @click="router.push('/')" :type="(leftBarState=='short')?'hidden':null" >
       <template #svg>
-        <i class="bi bi-house-fill"></i>
+        <!-- <i class="bi bi-house-fill"></i> -->#
       </template>
       <template #text>
-        音乐库
+        你好
       </template>
     </iconWithText>
 
-    <h1>设置区</h1>
 
-    <!--音乐目录-->
-    <iconWithText @click="router.push('/musicFolder/')" :type="(leftBarState=='short')?'hidden':null" >
-      <template #svg>
-        <i class="bi bi-folder-fill"></i>
-      </template>
-      <template #text>
-        本地音乐目录管理
-      </template>
-    </iconWithText>
 
-    <iconWithText @click="router.push('/musicFolder/')" :type="(leftBarState=='short')?'hidden':null" >
-      <template #svg>
-        <i class="bi bi-gear-fill"></i>
-      </template>
-      <template #text>
-        设置
-      </template>
-    </iconWithText>
-    
   </div>
 </template>
 

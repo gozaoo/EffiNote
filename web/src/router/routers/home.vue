@@ -1,6 +1,7 @@
 <script setup>
-import flexColumnRow from '../../components/flexColumnRow.vue';
-import musicCard from '../../components/musicCard.vue';
+// import flexColumnRow from '../../components/flexColumnRow.vue';
+// import musicCard from '../../components/musicCard.vue';
+import textRE from '../../components/textRE.vue';
 
 
 import { useRouter, useRoute } from 'vue-router'
@@ -10,10 +11,8 @@ const route = useRoute()
 </script>
 
 <template>
-    <h1>音乐库</h1>
-    <flexColumnRow>
-        <musicCard @click="router.push('/allMusic/')" title="本地音乐" type="gradient"></musicCard>
-    </flexColumnRow>
+    <textRE :text="'# 你好\n ## 欢迎使用EffiNote'" :id="0"></textRE>
+    
 </template>
 
 <style scoped>

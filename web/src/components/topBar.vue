@@ -27,7 +27,7 @@ const route = useRoute()
       <i class="bi bi-chevron-left"></i>
     </iconToClick>
     <div data-tauri-drag-region class="drag" >
-      <div  data-tauri-drag-region :style="(leftBarState == 'short')?'margin-left:18px':null" class="title">BlurLyric</div> 
+      <div  data-tauri-drag-region :style="(leftBarState == 'short')?'margin-left:18px':null" class="title">EffiNote</div> 
     </div>
     <div>
       <div>

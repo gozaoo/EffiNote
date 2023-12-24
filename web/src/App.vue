@@ -15,9 +15,19 @@
         },
         data() {
             return {
-                leftBarState: 'short'
+                leftBarState: 'short',
+                cache: [],
             }
         },
+        methods:{
+            getPassege(id){
+                if(this.cache[id] != undefined){
+                    return this.cache[id]
+                } else {
+                    return "#无法找到这篇文章\n\n可以向管理员反馈"
+                }
+            }
+        }
     }
 </script>
 

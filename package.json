@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "",
+  "main": "main.js",
   "scripts": {
     "test": "vite dev"
   },
@@ -26,6 +26,7 @@
     "bootstrap-icons": "^1.11.2",
     "express": "^4.18.2",
     "fs": "^0.0.1-security",
+    "marked": "^11.1.0",
     "single-line-log": "^1.1.2",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
