@@ -4,14 +4,14 @@
 import textRE from '../../components/textRE.vue';
 
 
-import { useRouter, useRoute } from 'vue-router'
+// import { useRouter, useRoute } from 'vue-router'
 
 // const router = useRouter()
 // const route = useRoute()
 </script>
 
 <template>
-    <textRE :text="'# 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n # 你好\n  ### 欢迎使用EffiNote'" :id="0"></textRE>
+    <textRE :text="'# 你好 \n 欢迎使用EffiNote'" :id="0"></textRE>
     <!-- <h1>a</h1> -->
 </template>
 

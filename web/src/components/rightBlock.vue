@@ -32,6 +32,7 @@
           let dom = this.$refs.routerText
           let currTop = this.top + (event.wheelDeltaY * 0.7);
           this.top = currTop
+          let currDomTop = Number(dom.style.top.slice(-dom.style.top.length,-2))
           // console.log(dom);
           if (currTop > 0) {
             this.scrollAnime = anime({
@@ -42,7 +43,7 @@
               },
               easing: 'spring(1, 100, 30, ' + (-currTop) + ')',
             })
-            console.log((-currTop));
+            // console.log((-currTop));
           } else if (-currTop  > dom.offsetHeight - (this.$refs.router.offsetHeight - 100) ) {
             
             this.scrollAnime = anime({
@@ -51,10 +52,10 @@
               update:(anime)=>{
                 this.top = Number(dom.style.top.slice(-dom.style.top.length,-2))
               },
-              easing: 'spring(1, 100, 30, ' + ( dom.offsetHeight -this.$refs.router.offsetHeight + 100 + currTop ) + ')',
+              easing: 'spring(1, 100, 30, ' + (2 * ( dom.offsetHeight - this.$refs.router.offsetHeight + 100 + currTop )) + ')',
             })
             // this.top = - dom.offsetHeight + 300
-            console.log ( dom.offsetHeight -this.$refs.router.offsetHeight + 100 + currTop ) ;
+            // console.log ( dom.offsetHeight -this.$refs.router.offsetHeight + 100 + currTop ) ;
           } else {
             this.scrollAnime = anime({
               targets: dom,
@@ -151,7 +152,8 @@
     word-break: break-all;
     line-break: anywhere;
     height: fit-content;
-    min-height: 110%;
+    min-height:  calc(100% - 120px)
+;
     transition: 0.2s;
   }
 </style>

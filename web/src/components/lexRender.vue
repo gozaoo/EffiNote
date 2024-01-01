@@ -33,7 +33,10 @@ import './skin.css'
     methods:{
         rende(){
             if(this.lexObject !=undefined){
-            this.head = (typeMap[this.lexObject.type] != undefined)?typeMap[this.lexObject.type](this.lexObject.depth):this.lexObject.type;
+            this.head = (typeMap[this.lexObject.type] != undefined)?typeMap[this.lexObject.type](this.lexObject.depth):{
+              type:this.lexObject.type,
+              text: ""
+            };
             this.content = this.lexObject.text||""
         }
         }
@@ -51,7 +54,7 @@ import './skin.css'
 
 <template>
   <span :class="head.type">
-    <span :class="['tag','tag'+head.type]">{{ head.text + ' ' }}</span>
+    <span v-if="head.text != ''" :class="['tag','tag'+head.type]">{{ head.text + ' ' }}</span>
     <span>{{ content }}</span>
   </span>
 
